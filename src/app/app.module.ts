@@ -3,9 +3,10 @@ import { NgModule } from '@angular/core';
 
 // MatGrid stuff
 import { MatGridListModule } from '@angular/material';
+import { LinkGridComponent } from './link-grid/link-grid.component';
 
 import { AppComponent } from './app.component';
-import { LinkGridComponent } from './link-grid/link-grid.component';
+
 
 @NgModule({
   declarations: [

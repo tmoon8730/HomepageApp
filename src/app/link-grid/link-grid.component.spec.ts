@@ -1,5 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { MatGridListModule } from '@angular/material';
 import { LinkGridComponent } from './link-grid.component';
 
 describe('LinkGridComponent', () => {
@@ -8,7 +8,8 @@ describe('LinkGridComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ LinkGridComponent ]
+      declarations: [ LinkGridComponent ],
+      imports: [MatGridListModule]
     })
     .compileComponents();
   }));
