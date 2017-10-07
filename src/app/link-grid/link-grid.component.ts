@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class LinkGridComponent {
 
   // Grid configuration
-  gridConfig = {numOfCols: 2, rowHeight: '100px'};
+  gridConfig = {numOfCols: 4, rowHeight: '100px'};
   // Definition for each tile //TODO: Replace this data with a call to a MongoDB
   tiles = [
     {text: 'Google', cols: 1, rows: 1, color: 'lightyellow', link: 'https://www.google.com'},

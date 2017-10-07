@@ -1,0 +1,70 @@
+<div class="container">
+  <div [hidden]="submitted">
+    <h1>Add a link</h1>
+    <form (ngSubmit)="onSubmit()" #linkForm="ngForm">
+<!-- Text -->
+      <div class="form-group">
+        <label for="name">Link Text</label>
+        <input type="text"
+               class="form-control"
+               id="name"
+               required
+               [(ngModel)]="model.text" name="text"
+               #name="ngModel">
+        <div [hidden]="name.valid || name.pristine"
+             class="alert alert-danger">
+          Name is required
+        </div>
+      </div>
+<!-- Color -->
+      <div class="form-group">
+        <label for="name">Color</label>
+        <input type="text"
+               class="form-control"
+               id="name"
+               required
+               [(ngModel)]="model.color" name="color"
+               #name="ngModel">
+        <div [hidden]="name.valid || name.pristine"
+             class="alert alert-danger">
+          Name is required
+        </div>
+      </div>
+<!-- Link -->
+      <div class="form-group">
+        <label for="name">Link</label>
+        <input type="text"
+               class="form-control"
+               id="name"
+               required
+               [(ngModel)]="model.link" name="link"
+               #name="ngModel">
+        <div [hidden]="name.valid || name.pristine"
+             class="alert alert-danger">
+          Name is required
+        </div>
+      </div>
+
+      <button type="submit" class="btn btn-success" [disabled]="!linkForm.form.valid">Submit</button>
+      <button type="button" class="btn btn-default" (click)="newLink($event)">New link</button>
+    </form>
+  </div>
+
+  <div [hidden]="!submitted">
+    <h2>You submitted the following:</h2>
+    <div class="row">
+      <div class="col-xs-3">Text</div>
+      <div class="col-xs-9  pull-left">{{ model.text }}</div>
+    </div>
+    <div class="row">
+      <div class="col-xs-3">Color</div>
+      <div class="col-xs-9 pull-left">{{ model.color }}</div>
+    </div>
+    <div class="row">
+      <div class="col-xs-3">Link</div>
+      <div class="col-xs-9 pull-left">{{ model.link }}</div>
+    </div>
+    <br>
+    <button class="btn btn-primary" (click)="submitted=false">Edit</button>
+  </div>
+</div>

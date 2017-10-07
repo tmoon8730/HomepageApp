@@ -23,4 +23,10 @@ describe('LinkGridComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+  // TODO: Remove hardcoded references
+  it('should render a grid with a link to google', async() => {
+    const compiled = fixture.debugElement.nativeElement;
+    expect(compiled.querySelector('a').first().textContent).toContain('Google');
+  });
+
 });
