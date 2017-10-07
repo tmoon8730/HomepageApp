@@ -13,6 +13,10 @@ import { AppComponent } from './app.component';
 // Feature Modules
 import { InputformComponent } from './inputform/inputform.component';
 
+// Data Service
+import { HttpModule } from '@angular/http';
+import { DataService } from './data.service';
+
 
 @NgModule({
   declarations: [
@@ -29,9 +33,10 @@ import { InputformComponent } from './inputform/inputform.component';
         path: 'addform',
         component: InputformComponent
       }
-    ])
+    ]),
+    HttpModule
   ],
-  providers: [],
+  providers: [DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
