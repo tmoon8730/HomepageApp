@@ -4,5 +4,6 @@
     Welcome to {{title}}!
   </h1>
 </div>
+<button class="btn btn-secondary" (click)="switchLink()" routerLink={{rtLink}}>Add Link</button>
+<router-outlet></router-outlet>
 <app-link-grid></app-link-grid>
-<app-inputform></app-inputform>

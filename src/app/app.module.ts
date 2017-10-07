@@ -23,9 +23,15 @@ import { InputformComponent } from './inputform/inputform.component';
   imports: [
     BrowserModule,
     MatGridListModule,
-    FormsModule
+    FormsModule,
+    RouterModule.forRoot([
+      {
+        path: 'addform',
+        component: InputformComponent
+      }
+    ])
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
