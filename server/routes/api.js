@@ -26,7 +26,19 @@ let response = {
     message: null
 };
 
-// Get users
+// Create link
+router.post('/link', (req, res) => {
+  connection((db) => {
+    db.collection('link')
+        .save(req.body, (err, result) =>{
+          if(err) return console.log(err)
+
+          console.log('saved to database')
+        })
+  });
+});
+
+// Read links
 router.get('/links', (req, res) => {
     connection((db) => {
         db.collection('link')
@@ -40,6 +52,8 @@ router.get('/links', (req, res) => {
                 sendError(err, res);
             });
     });
+
+
 });
 
 module.exports = router;

@@ -44,12 +44,12 @@
           Name is required
         </div>
       </div>
-
+<!-- Submit button -->
       <button type="submit" class="btn btn-success" [disabled]="!linkForm.form.valid">Submit</button>
       <button type="button" class="btn btn-default" (click)="newLink($event)">New link</button>
     </form>
   </div>
-
+<!-- Appears if the form is submitted -->
   <div [hidden]="!submitted">
     <h2>You submitted the following:</h2>
     <div class="row">

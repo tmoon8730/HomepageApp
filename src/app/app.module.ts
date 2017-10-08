@@ -18,6 +18,13 @@ import { HttpModule } from '@angular/http';
 import { DataService } from './data.service';
 
 
+const appRoutes: Routes = [
+  {
+    path: 'addform',
+    component: InputformComponent
+  }
+];
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,12 +35,7 @@ import { DataService } from './data.service';
     BrowserModule,
     MatGridListModule,
     FormsModule,
-    RouterModule.forRoot([
-      {
-        path: 'addform',
-        component: InputformComponent
-      }
-    ]),
+    RouterModule.forRoot(appRoutes),
     HttpModule
   ],
   providers: [DataService],

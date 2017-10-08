@@ -15,4 +15,8 @@ export class DataService {
       .map(result => this.result = result.json().data);
   }
 
+  createLink(data: any) {
+    this._http.post('/api/link', data).subscribe();
+  }
+
 }
