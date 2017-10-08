@@ -22,6 +22,10 @@ const appRoutes: Routes = [
   {
     path: 'addform',
     component: InputformComponent
+  },
+  {
+    path: '*',
+    component: LinkGridComponent
   }
 ];
 

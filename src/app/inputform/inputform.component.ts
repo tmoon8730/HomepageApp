@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { Router } from '@angular/router';
 
 // The base model for the links
 import { Link } from '../models/link';
@@ -23,6 +24,7 @@ export class InputformComponent {
   onSubmit() {
     this._dataService.createLink(this.model);
     this.submitted = true;
+    this.router.navigate(['*']);
   }
 
   // Function that runs when the New Link button is clicked
@@ -30,5 +32,7 @@ export class InputformComponent {
     this.model = new Link(1, '', 0, 0, '', '');
   }
 
-  constructor(private _dataService: DataService) {  }
+  constructor(private _dataService: DataService, private router: Router) {
+    this.model = new Link(1, '', 0, 0, '', '');
+  }
 }
