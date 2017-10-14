@@ -1,0 +1,9 @@
+.fillspace {
+  flex: 1 1 auto;
+}
+.rightbtn {
+  float: right;
+}
+.spacer {
+  width: 15px;
+}

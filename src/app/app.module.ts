@@ -16,6 +16,7 @@ import { InputformComponent } from './inputform/inputform.component';
 // Data Service
 import { HttpModule } from '@angular/http';
 import { DataService } from './data.service';
+import { TitleBarComponent } from './title-bar/title-bar.component';
 
 
 const appRoutes: Routes = [
@@ -33,7 +34,8 @@ const appRoutes: Routes = [
   declarations: [
     AppComponent,
     LinkGridComponent,
-    InputformComponent
+    InputformComponent,
+    TitleBarComponent
   ],
   imports: [
     BrowserModule,
