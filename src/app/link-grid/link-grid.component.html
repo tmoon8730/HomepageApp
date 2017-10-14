@@ -6,5 +6,6 @@
       [rowspan]="link.rows"
       [style.background]="link.color">
       <a id="tileLink" href={{link.link}} target="_blank">{{link.text}}</a>
+      <button (click)="deleteLink(link)">delete</button>
   </mat-grid-tile>
 </mat-grid-list>

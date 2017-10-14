@@ -26,8 +26,10 @@ let response = {
     message: null
 };
 
+
 // Create link
 router.post('/link', (req, res) => {
+  console.log('post : ' + req.body);
   connection((db) => {
     db.collection('link')
         .save(req.body, (err, result) =>{
@@ -53,7 +55,18 @@ router.get('/links', (req, res) => {
             });
     });
 
-
 });
 
+// Delete links
+router.delete('/link:link_id', (req, res) => {
+    var query = { id: parseInt(req.params.link_id.substr(1)) }
+    console.log("query: " + JSON.stringify(query));
+    connection((db) => {
+      db.collection('link')
+      .deleteOne(query, function (err, obj){
+        if (err) throw err;
+        console.log(obj.result.n + " document(s) deleted");
+      });
+    });
+});
 module.exports = router;

@@ -3,6 +3,8 @@ import { Injectable } from '@angular/core';
 import { Http, Headers, RequestOptions } from '@angular/http';
 import 'rxjs/add/operator/map';
 
+import { Link } from './models/link';
+
 @Injectable()
 export class DataService {
 
@@ -19,4 +21,8 @@ export class DataService {
     this._http.post('/api/link', data).subscribe();
   }
 
+  deleteLink(data: Link) {
+    const id = data.id;
+    this._http.delete('/api/link:' + id).subscribe();
+  }
 }
