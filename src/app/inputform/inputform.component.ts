@@ -29,10 +29,10 @@ export class InputformComponent {
 
   // Function that runs when the New Link button is clicked
   newLink(event) {
-    this.model = new Link(1, '', 0, 0, '', '');
+    this.model = new Link(1, '', 1, 1, '', '');
   }
 
   constructor(private _dataService: DataService, private router: Router) {
-    this.model = new Link(1, '', 0, 0, '', '');
+    this.model = new Link(1, '', 1, 1, '', '');
   }
 }
