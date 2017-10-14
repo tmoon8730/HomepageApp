@@ -23,5 +23,6 @@ export class LinkGridComponent {
 
   deleteLink(linkToDelete) {
     this._dataService.deleteLink(linkToDelete);
+    this._dataService.getLinks().subscribe(res => this.links = res);
   }
 }
