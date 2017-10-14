@@ -24,7 +24,7 @@ const appRoutes: Routes = [
     component: InputformComponent
   },
   {
-    path: '*',
+    path: '',
     component: LinkGridComponent
   }
 ];

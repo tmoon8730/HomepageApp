@@ -24,7 +24,7 @@ export class InputformComponent {
   onSubmit() {
     this._dataService.createLink(this.model);
     this.submitted = true;
-    this.router.navigate(['*']);
+    this.router.navigateByUrl('/');
   }
 
   // Function that runs when the New Link button is clicked
