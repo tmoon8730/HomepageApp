@@ -36,6 +36,7 @@ router.post('/link', (req, res) => {
           if(err) return console.log(err)
 
           console.log('saved to database')
+          res.end('saved');
         })
   });
 });
@@ -66,6 +67,7 @@ router.delete('/link:link_id', (req, res) => {
       .deleteOne(query, function (err, obj){
         if (err) throw err;
         console.log(obj.result.n + " document(s) deleted");
+        res.end('deleted');
       });
     });
 });
